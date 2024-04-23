@@ -8,7 +8,6 @@ namespace POO_Clase2.Ejercicio_1
 {
     public class Gato : Animal
     {
-
-        
+        public virtual void EmitirSonido() => Console.WriteLine(Nombre + " says: Meow!");
     }
 }

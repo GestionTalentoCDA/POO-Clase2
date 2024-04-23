@@ -1,4 +1,6 @@
 ﻿using POO_Clase2.Ejercicio_1;
+using POO_Clase2.Ejercicio_2;
+using POO_Clase2.Ejercicio_3;
 
 namespace POO_Clase2
 {
@@ -11,22 +13,41 @@ namespace POO_Clase2
             // el metodo emitir sonido no devuelve nada (void), imprimir en consola el "sonido"
 
 
-            Perro perro = new Perro() { Edad = 2, Nombre = "Buddy"};
+            Perro perro = new Perro() { Edad = 2, Nombre = "Buddy" };
 
             Gato gato = new Gato() { Edad = 5, Nombre = "Michi" };
 
+            Console.WriteLine("------");
+            Console.WriteLine("Ejercicio 1");
+            Console.WriteLine("------");
             perro.EmitirSonido();
-
             gato.EmitirSonido();
             #endregion
 
-            #region Ejercicio 2 
-            // Agregar la propiedad "Peso" unicamente para las notebooks 
+            #region Ejercicio 2
+            // Agregar la propiedad "Peso" unicamente para las notebooks
             // Agregar la propiedad "Refactorizada" que debe ser un booleano unicamente para las PcEscritorio
             // Instanciar una notebook y una pcEscritorio
             // Imprimir por pantalla las propiedades de cada uno
             #endregion
 
+            Notebook notebook = new Notebook() { Peso = 15, Marca = "Dell" };
+            PcEscritorio pcEscritorio = new PcEscritorio()
+            {
+                Refactorizada = true,
+                Marca = "Apple"
+            };
+
+            Console.WriteLine("------");
+            Console.WriteLine("Ejercicio 2");
+            Console.WriteLine("------");
+            notebook.Encender();
+            Console.WriteLine("Peso: " + notebook.Peso);
+            notebook.Apagar();
+            Console.WriteLine("------");
+            pcEscritorio.Encender();
+            Console.WriteLine("Refactorizada: " + pcEscritorio.Refactorizada);
+            pcEscritorio.Apagar();
 
             #region Ejercicio 3
 
@@ -36,6 +57,16 @@ namespace POO_Clase2
             // Instanciar las clases e imprimir los valores del area y el perimetro para cada figura
             // Mostrar los resultados por consola
             #endregion
+
+            Console.WriteLine("------");
+            Console.WriteLine("Ejercicio 3");
+            Console.WriteLine("------");
+            Circulo circulo = new Circulo() { radio = 5 };
+            Cuadrado cuadrado = new Cuadrado() { lado = 5 };
+            circulo.Area();
+            circulo.Perimetro();
+            cuadrado.Area();
+            cuadrado.Perimetro();
         }
     }
 }
